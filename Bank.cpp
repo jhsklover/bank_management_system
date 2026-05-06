@@ -45,12 +45,12 @@ void Bank::createCSV() {
 
     std::ofstream file("accountData.csv");
 
-    file << "Account,First,Last,Balance\n"; 
+    file << "Account,Balance,First,Last\n";
     for (int i = 0; i < amount; i++){
       file << numbers[i] << ","
+           << rand()% 20001 << ","
            << firstNames[rand()% 50] << ","
-           << lastNames[rand()% 50] << ","
-           << rand()% 20001 << "\n";
+           << lastNames[rand()% 50] << "\n";
     }
 
     file.close();
@@ -96,7 +96,7 @@ void Bank::updateCSV(const std::string& fileName){
     return;
   }
 
-  file << "Account,First,Last,Balance\n";
+  file << "Account,Balance,First,Last\n";
 
   for(const auto & account : accountList){
     file << account.getAccountNumber() << ","
@@ -423,16 +423,25 @@ void Bank::transferB(int &sender, int amount, int &receiver) {
     int senderIndex = binarySearchByNumber(sender);
     int receiverIndex = binarySearchByNumber(receiver);
 
-    if (senderIndex == -1){
+    if (senderIndex == -1) {
         std::cout << "Invalid sender account number." << std::endl;
-    } else if (receiverIndex == -1) {
+        return;
+    }
+
+    if (receiverIndex == -1) {
         std::cout << "Invalid receiver account number." << std::endl;
-    } else{
+        return;
+    }
+
+    if (accountList[senderIndex].getBalance() < amount || amount <= 0) {
+        std::cout << "Invalid transfer amount." << std::endl;
+        return;
+    }
         accountList[senderIndex].withdraw(amount);
         accountList[receiverIndex].deposit(amount);
-    }
 }
 
 int Bank::getBankSize() {
     return accountList.size();
 }
+
