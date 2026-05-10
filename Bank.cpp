@@ -61,6 +61,8 @@ void Bank::createCSV() {
 void Bank::loadCSV(const std::string& fileName){
 
   accountList.clear();
+  sortedByBalance = false;
+  sortedByNumber = false;
 
   std::ifstream file(fileName);
 
