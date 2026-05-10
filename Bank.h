@@ -67,4 +67,7 @@ public:
 private:
 
     std::vector<Account> accountList;
+    bool sortedByNumber = false;
+    bool sortedByBalance = false;
+
 };
