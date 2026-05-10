@@ -110,6 +110,12 @@ void Bank::updateCSV(const std::string& fileName){
 
 //Search functions
 int Bank::binarySearchByNumber(int targetValue){
+
+  if (!sortedByNumber) {
+      std::cout << "Error: Accounts are not sorted by number.";
+      return -1;
+  }
+
   int left = 0; 
   int right = accountList.size() - 1;
 
@@ -129,6 +135,12 @@ int Bank::binarySearchByNumber(int targetValue){
 }
 
 int Bank::binarySearchByBalance(int targetValue){
+
+  if (!sortedByBalance) {
+      std::cout << "Error: Accounts are not sorted by balance.";
+      return -1; // vector isn't sorted
+  }
+
   int left = 0; 
   int right = accountList.size() - 1;
 
@@ -154,6 +166,12 @@ int Bank::binarySearchByBalance(int targetValue){
 }
 
 int Bank::jumpSearchByNumber(int targetAccountNumber) {
+
+    if (!sortedByNumber) {
+        std::cout << "Error: Accounts are not sorted by number.";
+        return -1;
+    }
+
     if(accountList.size() == 0) return -1;
     int vectorSize =  accountList.size();
     int blockStartIndex = 0;
@@ -184,6 +202,11 @@ int Bank::jumpSearchByNumber(int targetAccountNumber) {
 }
 
 int Bank::jumpSearchByBalance(int targetBalance) {
+
+    if (!sortedByBalance) {
+        std::cout << "Error: Accounts are not sorted by balance.";
+        return -1;
+    }
     if(accountList.size() == 0) return -1;
     int vectorSize =  accountList.size();
     int blockStartIndex = 0;
@@ -244,6 +267,9 @@ void Bank::insertionSortByNumber(){
 
     accountList[j + 1] = key;
   }
+
+  sortedByNumber = true;
+  sortedByBalance = false;
 }
 
 void Bank::insertionSortByBalance(){
@@ -258,6 +284,9 @@ void Bank::insertionSortByBalance(){
 
     accountList[j + 1] = key;
   }
+
+  sortedByBalance = true;
+  sortedByNumber = false;
 }
 
 void Bank::swap_function(Account& A1, Account& A2){
@@ -360,14 +389,23 @@ void Bank::mergeSort(int left, int right, bool compare){
 
 void Bank::mergeSortByNumber() {
     mergeSort(0, accountList.size() - 1, true);
+
+    sortedByBalance = false;
+    sortedByNumber = true;
 }
 
 void Bank::mergeSortByBalance() {
     mergeSort(0, accountList.size() - 1, false);
+
+    sortedByBalance = true;
+    sortedByNumber = false;
 }
 
 void Bank::quickSortByNumber() {
     quickSortByNumber(0, accountList.size() -1);
+
+    sortedByBalance = false;
+    sortedByNumber = true;
 }
 
 void Bank::quickSortByNumber(int low, int high){
@@ -382,6 +420,9 @@ void Bank::quickSortByNumber(int low, int high){
 
 void Bank::quickSortByBalance() {
     quickSortByBalance(0, accountList.size() - 1);
+
+    sortedByBalance = true;
+    sortedByNumber = false;
 }
 
 void Bank::quickSortByBalance(int low, int high){
