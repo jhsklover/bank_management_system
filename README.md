@@ -23,22 +23,23 @@
 6. If you choose exit, the program will terminate.
 
 ## Sample Input and Output ##
-`Output:` Welcome to the Bank Management System. Choose an option: 1. Search 2. Sort 3. Exit
-`Input:` 1
+
+`Output`: Welcome to the Bank Management System! Choose an option: 1. Search 2. Sort 3. Exit
+
+`Input`: 1
+
 `Output:`
---------------------------------------------
+
 Starting Linear Search...
 
 Account number 357958 found at index: 453
 Lookup time: 2206 microseconds
 
---------------------------------------------
 Starting Jump Search...
 
 Account number 357958 found at index: 63
 Lookup time: 564 microseconds
 
---------------------------------------------
 Starting Binary Search...
 
 Binary Search:
