@@ -86,9 +86,9 @@ Merge Sort completed in: 3998 microseconds
 
 
 ## Algorithms ##
-1. **Binary Search**:
-2. **Jump Search**:
-3. **Linear Search**:
-4. **Insertion Sort**:
-5. **Merge Sort**:
-6. **Quick Sort**:
+1. **Binary Search**: Binary Search operates based on splitting the vector down the middle and comparing the target value to the middle value. If the target value is less than the middle value, the entire right side is discarded. If the target value is more than the middle value, the entire left side is discarded. Binary Search has a time complexity of O(log n) across its average and worst case. In the event the target value is the first middle element, the time complexity is O(1).
+2. **Jump Search**: Jump Search has a worst and average case of O(sqrt n). This is because blocks are formed in increments of sqrt(n), where the target value is compared alongside the value at the end of each block. In its best case, the time complexity is O(1) if it is amongst the first block.
+3. **Linear Search**: Linear Search is a brute-force algorithm which iterates over the entire vector until it either finds the target value or runs out of elements to check. The best case is O(1), if the target is the first elemeent. In its average and worst cases, Linear Search has a runtime of O(n).
+4. **Insertion Sort**: Insertion Sort is an incredibly slow sorting algorithm which iterates across a vector by comparing a key to the previous elements. If the key is less than a previous element, they must be swapped. The key becomes the next rightmost element. The time complexity is O(n) in the best case, but is O(n^2) in the average and worst cases.
+5. **Merge Sort**: Merge Sort repeatedly splits up the vector by two until all elements are isolated. Then, split up portions are merged back together in sorted order, eventually merging all of the elements in sorted order. Across the worst, best, and average cases, Merge Sort's runtime is O(n log n).
+6. **Quicksort**: Quicksort is based on the idea of partitioning the dataset on the basis of a pivot element; in the case of this project, the pivot element is the last element of the vector. Each piece of data is then compared to the pivot element: all elements less than it are moved to the left of the pivot element, while the greater elements are moved to the right. To finish off the partitioning operation, the pivot element is swapped with the element that is at the partition index. Quicksort is recursive, so it calls itself to repeat the partition operation on both the left and right side; the process continues until each sub-vector has 0 or 1 element, meaning that everything has been sorted. The best and average case results in a runtime of O(n log n), but if the worst possible pivot is chosen each time, the runtime becomes O(n^2).
