@@ -25,7 +25,8 @@
 ## Sample Input and Output ##
 `Output:` Welcome to the Bank Management System. Choose an option: 1. Search 2. Sort 3. Exit
 `Input:` 1
-`Output:` --------------------------------------------
+`Output:`
+--------------------------------------------
 Starting Linear Search...
 
 Account number 357958 found at index: 453
