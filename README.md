@@ -24,9 +24,14 @@
 
 ## Sample Input and Output ##
 
-`Output`: Welcome to the Bank Management System! Choose an option: 1. Search 2. Sort 3. Exit
 
-`Input`: 1
+`Output`: Welcome to the Bank Management System! Choose an option: 1. Transaction 2. Search/Sort 3. Exit
+
+`Input`: 2
+
+`Output:` Select an option: 1. Sort 2. Search
+
+`Input:` 2
 
 `Output:`
 
@@ -49,6 +54,33 @@ Binary Search:
 Account number 357958 found at index: 63
 
 Lookup time: 317 microseconds
+
+
+`Output`: Welcome to the Bank Management System! Choose an option: 1. Transaction 2. Search/Sort 3. Exit
+
+`Input`: 2
+
+`Output:` Select an option: 1. Sort 2. Search
+
+`Input:` 1
+
+`Output:`
+
+Starting Insertion Sort...
+
+Insertion Sort:
+
+Time: 13768 microseconds
+
+Starting Quick Sort...
+
+Quick Sort:
+
+Quick Sort completed in: 2260 microseconds
+
+Starting Merge Sort...
+
+Merge Sort completed in: 3998 microseconds
 
 
 ## Algorithms ##
