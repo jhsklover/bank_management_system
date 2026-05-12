@@ -1,4 +1,4 @@
-### Bank Management System ###
+# Bank Management System #
 
 ## Core Information ##
 **Team Members:** Jack Sklover, Angel Echeverry
@@ -24,7 +24,7 @@
 
 ## Sample Input and Output ##
 
-# Scenario 1: Searching #
+### Scenario 1: Searching ###
 
 `Output`: Welcome to the Bank Management System! Choose an option: 1. Transaction 2. Search/Sort 3. Exit
 
@@ -56,7 +56,7 @@ Account number 357958 found at index: 63
 
 Lookup time: 317 microseconds
 
-# Scenario 2: Sorting #
+### Scenario 2: Sorting ###
 
 `Output`: Welcome to the Bank Management System! Choose an option: 1. Transaction 2. Search/Sort 3. Exit
 
