@@ -6,5 +6,5 @@
 **Programming Languages:** C++
 
 **Libraries Required:** 
-- <vector>
+- vector
 - <cmath>
