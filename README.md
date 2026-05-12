@@ -1,2 +1,8 @@
 ### Bank Management System ###
-## Team Members:## Jack Sklover, Angel Echeverry
+
+## Information ##
+**Team Members:** Jack Sklover, Angel Echeverry
+**Programming Languages:** C++
+**Libraries Required:** 
+- <vector>
+- <cmath>
