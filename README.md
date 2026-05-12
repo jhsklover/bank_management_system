@@ -33,17 +33,21 @@
 Starting Linear Search...
 
 Account number 357958 found at index: 453
+
 Lookup time: 2206 microseconds
 
 Starting Jump Search...
 
 Account number 357958 found at index: 63
+
 Lookup time: 564 microseconds
 
 Starting Binary Search...
 
 Binary Search:
+
 Account number 357958 found at index: 63
+
 Lookup time: 317 microseconds
 
 
